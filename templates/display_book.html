@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='display_book.css') }}">
+    <link rel="stylesheet" href="display_book.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Library Books</h1>
+    </div>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_book') }}">Add Book</a>
+        <a href="{{ url_for('display_books') }}">Display Books</a>
+        <a href="{{ url_for('issue_book') }}">Issue Book</a>
+        <a href="{{ url_for('submit_book') }}">Submit Book</a>
+        <a href="{{ url_for('delete_book') }}">Delete Book</a>
+    </div>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Code</th>
+                    <th>Total</th>
+                    <th>Subject</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <tr>
+                    <td>{{ book[0] }}</td>  <!-- book[0] is Name -->
+                    <td>{{ book[1] }}</td>  <!-- book[1] is Code -->
+                    <td>{{ book[2] }}</td>  <!-- book[2] is TotalBooks -->
+                    <td>{{ book[3] }}</td>  <!-- book[3] is Subject -->
+                </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">No books found.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <a href="/">Back to Home</a>
+    <div class="footer">
+        <p>&copy; 2024 Library Management System</p>
+    </div>
+</body>
+</html>

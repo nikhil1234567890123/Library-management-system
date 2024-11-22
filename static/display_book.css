@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 100px auto 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background-color: #2c3e50; /* Dark Blue */
+    padding: 20px 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.header h1 {
+    font-family: 'Tilt Prism', cursive;
+    font-size: 2.5rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3498de;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #2872a7;
+}
+
+.navbar a.active {
+    background-color: #212121;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+table tbody td {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}

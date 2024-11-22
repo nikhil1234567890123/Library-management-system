@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <title>Library Management</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Library</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+            <li><a href="{{ url_for('add_book') }}">Add Book</a></li>
+            <li><a href="{{ url_for('display_books') }}">Display Books</a></li>
+            <li><a href="{{ url_for('issue_book') }}">Issue Book</a></li>
+            <li><a href="{{ url_for('submit_book') }}">Submit Book</a></li>
+            <li>
+                <a href="#">More</a>
+                <ul class="dropdown">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container" style="margin-top: 60px;">
+        <!-- Your content goes here -->
+    </div>
+
+    <script>
+        // Function to toggle mobile menu
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar ul');
+            navbar.classList.toggle('active');
+        }
+    </script>
+    <!-- Image Section -->
+<div class="image-section">
+    <img src="https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Library" />
+</div>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About Library</h3>
+            <p>
+                Welcome to the Library Management System. Here you can manage all your library activities efficiently, from adding books to issuing and returning them. Learn more about our services below.
+            </p>
+        </div>
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('add_book') }}">Add Book</a></li>
+                <li><a href="{{ url_for('display_books') }}">Display Books</a></li>
+                <li><a href="{{ url_for('issue_book') }}">Issue Book</a></li>
+                <li><a href="{{ url_for('submit_book') }}">Submit Book</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact-info">
+            <h3>Contact Info</h3>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Library St, City</li>
+                <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                <li><i class="fas fa-envelope"></i> contact@library.com</li>
+            </ul>
+        </div>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Library Management System | Designed by Nikhil Kaundal</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

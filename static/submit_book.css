@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px; /* Set max width for the form */
+    margin: 80px auto; /* Center the container with top margin */
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h2 {
+    text-align: center;
+    color: #3498de; /* Header color */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Spacing between form elements */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Space below the label */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded input corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s ease; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #3498de; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="submit"] {
+    background-color: #3498de; /* Button color */
+    color: white; /* Button text color */
+    padding: 12px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.1rem; /* Button text size */
+    transition: background-color 0.3s ease; /* Transition for button color */
+    width: 100%; /* Full width button */
+}
+
+input[type="submit"]:hover {
+    background-color: #2872a7; /* Darker blue on hover */
+}
+
+.back-link {
+    display: block; /* Block display for the link */
+    text-align: center; /* Center the link */
+    margin-top: 20px; /* Spacing above link */
+    color: #3498de; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Transition for link color */
+}
+
+.back-link:hover {
+    color: #2872a7; /* Darker link color on hover */
+}
+/* Navbar */
+.navbar {
+    background-color: #3498de;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #2872a7;
+}
+
+.navbar a.active {
+    background-color: #212121;
+}
